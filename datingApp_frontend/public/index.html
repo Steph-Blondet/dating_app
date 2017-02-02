@@ -12,9 +12,25 @@
         <header>DATING APP HEADER</header>
         <div class="container">
             <main>main content goes here</main>
-            <nav>some daters go here</nav>
-            <aside>some daters go here</aside>
+            <nav>
+                <div ng-repeat="daters in ctrl.datersLeft">
+                    <img ng-src="{{daters.img}}"/>
+                    <h3>{{ daters.name }}</h3>
+                    <p>Age: {{ daters.age }}</p>
+                    <p>{{ daters.gender }}</p>
+                </div>
+            </nav>
+            <aside>
+                <div ng-repeat="daters in ctrl.datersRight">
+                    <img ng-src="{{daters.img}}"/>
+                    <h3>{{ daters.name }}</h3>
+                    <p>Age: {{ daters.age }}</p>
+                    <p>{{ daters.gender }}</p>
+                </div>
+            </aside>
         </div>
         <footer>form goes here</footer>
+
+
     </body>
 </html>
